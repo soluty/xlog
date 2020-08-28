@@ -1,10 +1,14 @@
 package logger
 
-import "github.com/soluty/xlog"
+import (
+	"os"
+
+	"github.com/soluty/xlog"
+)
 
 func init() {
 	func() {
-		xlog.Boot("..", 1)
+		xlog.Boot("..", 1, os.Stderr)
 	}()
 }
 
