@@ -5,9 +5,11 @@
 
 debug消息包含日期,文件名,行号,包名,函数名
 
-info消息只包含日期
+info消息相当于fmt.Println(), 除了可以重定向.
 
 error消息除了debug消息包含的以外,还包含当时gorutine的堆栈信息
 
-debug消息可以通过启动参数打开, 默认情况下是关闭的.
+debug消息可以通过启动参数debug打开, 默认情况下是关闭的.
+
+error消息默认输出到stderr
 

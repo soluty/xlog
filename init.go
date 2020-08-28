@@ -45,8 +45,11 @@ func Boot(mainPath string, wrapDepth int, w ...io.Writer) {
 	} else if len(w) > 1 {
 		errLog = log.New(w[0], "", log.LstdFlags)
 		infoLog = log.New(w[1], "", 0)
+		debugLog = log.New(w[1], "", log.LstdFlags)
 	} else if len(w) > 0 {
 		errLog = log.New(w[0], "", log.LstdFlags)
+		infoLog = log.New(w[0], "", 0)
+		debugLog = log.New(w[0], "", log.LstdFlags)
 	}
 	callerDepth = callerDepth + wrapDepth
 	file, _, _ := fileAndLine(callerDepth, true)
