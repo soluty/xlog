@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// 写相对main.go的相对路径
+	// 写根目录相对main.go的相对路径
 	xlog.Boot("..", 0)
 	notinroot.Hello()
 	xlog.Debug("aaa")
